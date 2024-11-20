@@ -5,7 +5,6 @@
 #include "ISettingsModule.h"
 #include "ISettingsSection.h"
 #include "ServerInfoSettings.h"
-#include "ServerModePlayMenuStyle.h"
 #include "ServerModeSetting.h"
 #include "ToolMenus.h"
 
@@ -20,12 +19,6 @@ public:
 };
 
 void FServerModePlayMenuModule::StartupModule() {
-	// This code will execute after your module is loaded into memory; the exact
-	// timing is specified in the .uplugin file per-module
-
-	FServerModePlayMenuStyle::Initialize();
-	FServerModePlayMenuStyle::ReloadTextures();
-
 	UToolMenus::RegisterStartupCallback(
 	    FSimpleMulticastDelegate::FDelegate::CreateRaw(
 	        this, &FServerModePlayMenuModule::RegisterMenus));
@@ -38,15 +31,9 @@ void FServerModePlayMenuModule::StartupModule() {
 }
 
 void FServerModePlayMenuModule::ShutdownModule() {
-	// This function may be called during shutdown to clean up your module.  For
-	// modules that support dynamic reloading, we call this function before
-	// unloading the module.
-
 	UToolMenus::UnRegisterStartupCallback(this);
 
 	UToolMenus::UnregisterOwner(this);
-
-	FServerModePlayMenuStyle::Shutdown();
 
 	UnregisterSeverInfoSetting();
 }
