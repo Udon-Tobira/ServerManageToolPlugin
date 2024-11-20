@@ -4,7 +4,7 @@
 
 #include "Modules/ModuleManager.h"
 
-class FServerModeLibraryModule : public IModuleInterface
+class FServerInfoLibraryModule : public IModuleInterface
 {
 public:
 

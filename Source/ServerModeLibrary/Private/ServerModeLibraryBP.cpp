@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "ServerModeLibraryBP.h"
+#include "ServerInfoLibraryBP.h"
 
 #include "ServerInfoSettings.h"
 
@@ -8,12 +8,12 @@
 #include "ServerModeSetting.h"
 #endif
 
-DEFINE_LOG_CATEGORY(LOG_SERVERMODELIBRARYBP)
+DEFINE_LOG_CATEGORY(LOG_SERVERINFOLIBRARYBP)
 
-FString UServerModeLibrary::GetServerAddress(TSoftObjectPtr<UWorld> Map) {
+FString UServerInfoLibrary::GetServerAddress(TSoftObjectPtr<UWorld> Map) {
 	// if map is not valid
 	if (Map.IsNull()) {
-		UE_LOG(LOG_SERVERMODELIBRARYBP, Error, TEXT("Map %s doesn't exist."),
+		UE_LOG(LOG_SERVERINFOLIBRARYBP, Error, TEXT("Map %s doesn't exist."),
 		       *Map.ToString());
 		return "";
 	}
@@ -28,7 +28,7 @@ FString UServerModeLibrary::GetServerAddress(TSoftObjectPtr<UWorld> Map) {
 
 	// if setting for the map doesn't exist
 	if (!ServerMapSettingPtr) {
-		UE_LOG(LOG_SERVERMODELIBRARYBP, Error,
+		UE_LOG(LOG_SERVERINFOLIBRARYBP, Error,
 		       TEXT("Server address for the Map %s doesn't exist."), *MapName);
 		return "";
 	}

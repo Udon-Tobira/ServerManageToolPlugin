@@ -1,16 +1,16 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "ServerModeLibrary.h"
+#include "ServerInfoLibrary.h"
 
-#define LOCTEXT_NAMESPACE "FServerModeLibraryModule"
+#define LOCTEXT_NAMESPACE "FServerInfoLibraryModule"
 
-void FServerModeLibraryModule::StartupModule()
+void FServerInfoLibraryModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 	
 }
 
-void FServerModeLibraryModule::ShutdownModule()
+void FServerInfoLibraryModule::ShutdownModule()
 {
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
 	// we call this function before unloading the module.
@@ -19,4 +19,4 @@ void FServerModeLibraryModule::ShutdownModule()
 
 #undef LOCTEXT_NAMESPACE
 	
-IMPLEMENT_MODULE(FServerModeLibraryModule, ServerModeLibrary)
+IMPLEMENT_MODULE(FServerInfoLibraryModule, ServerInfoLibrary)

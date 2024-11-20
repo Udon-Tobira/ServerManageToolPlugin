@@ -5,15 +5,15 @@
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 
-#include "ServerModeLibraryBP.generated.h"
+#include "ServerInfoLibraryBP.generated.h"
 
-DECLARE_LOG_CATEGORY_EXTERN(LOG_SERVERMODELIBRARYBP, Log, All)
+DECLARE_LOG_CATEGORY_EXTERN(LOG_SERVERINFOLIBRARYBP, Log, All)
 
 /**
  *
  */
 UCLASS()
-class SERVERMODELIBRARY_API UServerModeLibrary
+class SERVERINFOLIBRARY_API UServerInfoLibrary
     : public UBlueprintFunctionLibrary {
 	GENERATED_BODY()
 
