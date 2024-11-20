@@ -1,0 +1,34 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "ServerModePlayMenu",
+	"Description": "Add select \"Server mode\" menu to play menu.",
+	"Category": "Other",
+	"CreatedBy": "Udon-Tobira",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "ServerModePlayMenu",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "ServerInfoSettingsModule",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen"
+		},
+		{
+			"Name": "ServerModeLibrary",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen"
+		}
+	]
+}
