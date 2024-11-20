@@ -108,22 +108,18 @@ void FServerModePlayMenuModule::RegisterSeverInfoSetting() {
 	if (ISettingsModule* SettingsModule =
 	        FModuleManager::GetModulePtr<ISettingsModule>("Settings")) {
 		ISettingsSectionPtr SettingsSection = SettingsModule->RegisterSettings(
-		    "Project", "Project", "zd", LOCTEXT("ServerInfoSettingName", "Servers"),
+		    "Project", "Project", "ServerInfoSettings",
+		    LOCTEXT("ServerInfoSettingName", "Servers"),
 		    LOCTEXT("ServerInfoDescription", "Settings about servers"),
 		    GetMutableDefault<UServerInfoSettings>());
-
-		// if (SettingsSection.IsValid()) {
-		//	SettingsSection->OnModified().BindRaw(
-		//	    this, &FMySettingModule::HandleSettingsSaved);
-		// }
 	}
 }
 
 void FServerModePlayMenuModule::UnregisterSeverInfoSetting() {
 	if (ISettingsModule* SettingsModule =
 	        FModuleManager::GetModulePtr<ISettingsModule>("Settings")) {
-		SettingsModule->UnregisterSettings("Project", "MySettingCategory",
-		                                   "MySetting");
+		SettingsModule->UnregisterSettings("Project", "Project",
+		                                   "ServerInfoSettings");
 	}
 }
 
