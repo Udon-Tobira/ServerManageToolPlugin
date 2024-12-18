@@ -18,7 +18,7 @@ FString UServerInfoLibrary::GetServerAddress(TSoftObjectPtr<UWorld> Map) {
 		return "";
 	}
 
-	const auto& MapName = Map.GetAssetName();
+	const auto& MapName = Map.GetLongPackageName();
 
 	const auto* const ServerInfoSetting = GetDefault<UServerInfoSettings>();
 	const auto&       ServerList        = ServerInfoSetting->ServerList;
