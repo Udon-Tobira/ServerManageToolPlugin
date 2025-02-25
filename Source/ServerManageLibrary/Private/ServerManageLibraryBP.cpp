@@ -46,3 +46,8 @@ FString UServerManageLibrary::GetServerAddress(TSoftObjectPtr<UWorld> Map) {
 
 	return ServerMapSettingPtr->ServerAddress;
 }
+
+void UServerManageLibrary::RequestServerExit() {
+	// request exit main-loop
+	FGenericPlatformMisc::RequestExit(false);
+}

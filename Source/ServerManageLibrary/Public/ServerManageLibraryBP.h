@@ -20,4 +20,7 @@ class SERVERMANAGELIBRARY_API UServerManageLibrary
 public:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	static FString GetServerAddress(TSoftObjectPtr<UWorld> Map);
+
+	UFUNCTION(BlueprintCallable)
+	static void RequestServerExit();
 };
