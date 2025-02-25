@@ -26,7 +26,7 @@
 			"LoadingPhase": "PreLoadingScreen"
 		},
 		{
-			"Name": "ServerInfoLibrary",
+			"Name": "ServerManageLibrary",
 			"Type": "Runtime",
 			"LoadingPhase": "PreLoadingScreen"
 		}
