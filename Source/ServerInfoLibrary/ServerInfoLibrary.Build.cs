@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class ServerInfoLibrary : ModuleRules
+public class ServerManageLibrary : ModuleRules
 {
-    public ServerInfoLibrary(ReadOnlyTargetRules Target) : base(Target)
+    public ServerManageLibrary(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
